@@ -44,6 +44,64 @@
 			let _null = null 
 
 			console.log(typeof _string, typeof _number, typeof _boolean, typeof _undef, typeof _null)
+
+			let vehicle = {
+				brand: "toyota",
+				model: "crown",
+				year:2017
+			};
+
+			console.log(vehicle.model);
+			console.log(vehicle["year"]);
+
+			car = {
+				name: "supra",
+				speed: 270
+			}
+
+			console.log(car["speed"]);
+
+			console.log(typeof car)
+
+			vehicle.color = "blue";
+
+			console.log(vehicle["color"])
+
+			//adding properties using thebracket notation
+
+			let newProp = "make";
+
+			vehicle[newProp] = "turbo";
+
+			console.log(vehicle);
+
+			let engineProps = {
+				rpm : 1000,
+				milage :15000,
+				type : "2nz"
+			};
+
+			Object.assign(vehicle, engineProps);
+			console.log(vehicle);
+			console.log(vehicle["type"])
+
+			// using spread operators
+
+			let updatedVehicle = {
+				...vehicle,
+				lights : "led",
+				milage :14000
+			};
+
+			console.log(updatedVehicle);
+
+			//delete property using dot notation
+			delete updatedVehicle.milage;
+			console.log(updatedVehicle)
+
+			//delete property using bracket notation
+			delete updatedVehicle["lights"];
+			console.log(updatedVehicle);
 		</script>
 	</body>
 </html>
